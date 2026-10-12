@@ -42,6 +42,18 @@ Players of the Memory Game who want to choose a light or dark appearance,
 including players using the game in low-light environments and players who
 operate it with a keyboard.
 
+### User stories
+
+- As a player, I want to switch to dark theme for comfortable play in
+  low-light conditions.
+- As a player, I want theme changes to leave my current game undisturbed.
+- As a returning player, I want my saved theme preference restored when I
+  return.
+- As a mobile player, I want the game to remain readable and usable on a small
+  screen in either theme.
+- As a keyboard or assistive-technology user, I want the theme control and its
+  state to be accessible.
+
 ## 6. User experience
 
 A clearly labeled theme control appears near the existing game controls. It
@@ -151,3 +163,35 @@ The page already contains a light/dark toggle and saves the selected theme in
 `localStorage` under `memoryGameTheme`. This PRD records the intended product
 behavior and acceptance criteria for completing and verifying that feature;
 it is a requirements document, not a request to change the game implementation.
+
+## 12. Non-functional requirements
+
+- Theme changes should be immediate and should not noticeably delay rendering
+  or gameplay.
+- Keep theme values centralized in CSS custom properties so both palettes stay
+  consistent and easy to maintain.
+- Support modern desktop and mobile browsers without adding external libraries
+  or network-dependent assets.
+
+## 13. Risks and mitigations
+
+| Risk | Mitigation |
+| --- | --- |
+| Theme colors make text or game pieces difficult to distinguish. | Use separate surface, text, card, and focus colors in both palettes; verify the whole page in both modes. |
+| Theme changes interfere with game state or gameplay. | Keep theme application independent from board initialization and game-state updates. |
+| Theme preference conflicts with saved scores. | Store the preference under its own `memoryGameTheme` key and leave `memoryGameScores` untouched. |
+| A visual state is missed by the theme styling. | Check the board, focus and hover states, scores panel, controls, and completion dialog in both modes. |
+
+## 14. Release readiness
+
+Treat the theme as a focused UI enhancement. Before release, verify the manual
+checklist in a browser, including gameplay in both themes and persistence after
+reload. Keep the implementation self-contained in the existing HTML page.
+
+## 15. Validation plan
+
+Validate the feature by opening `memory-game.html` in a desktop browser and at a
+narrow/mobile viewport. Test theme toggling and persistence, keyboard
+accessibility, both board sizes, card matching, timer, rating, replay, score
+saving, and the completion dialog. Confirm that existing gameplay remains
+available after theme changes.
