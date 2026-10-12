@@ -155,7 +155,26 @@ purpose, content rules, and implementation guidance. AI can help structure,
 edit, and critique material, but you are responsible for verifying every claim,
 metric, citation, and public disclosure.
 
-## Repository
+## Git setup
 
-This starter is hosted at
-<https://github.com/PiyushDesign2727/Memory-Game-by-Piyush>.
+This directory is already initialized as a Git repository on the `main` branch.
+Before publishing the finished portfolio, inspect the configured remote:
+
+```bash
+git remote -v
+```
+
+The current remote is for the existing game project. If you create a separate
+repository for your portfolio, replace the remote URL with that repository's
+URL before pushing:
+
+```bash
+git remote set-url origin https://github.com/<YOUR-USERNAME>/<YOUR-PORTFOLIO-REPOSITORY>.git
+git status
+git add .
+git commit -m "Prepare AI PM portfolio"
+git push -u origin main
+```
+
+Do not push until the portfolio content is complete, reviewed, and approved for
+public sharing.
