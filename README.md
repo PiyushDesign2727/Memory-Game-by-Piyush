@@ -1,78 +1,161 @@
-# Memory Game and Snake
+# AI Product Manager Portfolio — Starter
 
-Two lightweight, standalone browser games built with plain HTML, CSS, and
-JavaScript. Open either game directly in a modern browser—no installation,
-build step, or external dependency is required.
+A starter repository for building a clear, evidence-based portfolio that shows
+how you identify product problems, make decisions, collaborate with engineering
+and design, and evaluate AI-enabled experiences.
 
-## Games
+> **Current status:** This repository contains the portfolio setup guidance
+  plus two standalone browser-game projects. It is not yet a completed portfolio
+  website. Replace bracketed placeholders with your verified information before
+  sharing it with employers or the public.
 
-### Memory Game
+## Portfolio goals
 
-Match all the emoji pairs on a **4×4** or **6×6** board.
+Use the portfolio to help a hiring team quickly understand:
 
-- Flip cards with a mouse or with **Tab** and **Enter/Space**.
-- Track moves, elapsed time, and a move-based star rating.
-- Switch between light and dark themes; the choice is saved in the browser.
-- View your five best scores.
+- What kinds of product problems you work on.
+- How you turn user and business needs into a product strategy.
+- How you prioritize, define, and ship solutions with a team.
+- How you assess AI use cases, quality, risk, and human oversight.
+- What outcomes you achieved and how those outcomes were measured.
 
-Open [`memory-game.html`](memory-game.html) to play.
+The portfolio should show the work and reasoning behind results—not just a
+collection of polished screens or AI terminology.
 
-### Snake
+## Recommended portfolio sections
 
-Steer the snake around the board, eat apples to grow, and avoid the walls and
-your own body.
+1. **Home:** Your name, target role, concise value proposition, and links to
+   your strongest case studies.
+2. **About:** Your verified background, product domains, working style, and
+   areas of interest.
+3. **Case studies:** Two or three substantial examples, each with the problem,
+   evidence, decisions, execution, and outcomes.
+4. **AI product work:** Relevant AI use cases with evaluation, limitations,
+   privacy, safety, and human-review considerations. If you do not yet have
+   shipped AI-product experience, label experiments and proposals accurately.
+5. **Artifacts:** Selected PRDs, prototypes, research summaries, roadmaps, or
+   evaluation plans that you are authorized to share.
+6. **Resume and contact:** A current resume and professional contact links you
+   have chosen to publish.
 
-- Use the **arrow keys** or **W/A/S/D** to steer.
-- Use the on-screen direction buttons for mouse or touch input.
-- Pause or resume with the button or **Space**.
-- Earn 10 points per apple and keep a personal best score.
-- The page follows your operating system's light/dark color preference.
+## Case-study structure
 
-Open [`snake.html`](snake.html) to play.
+For each project, document:
 
-## Run locally
+- **Summary:** Project, role, timeframe, team, and status (shipped, in progress,
+  prototype, or proposal).
+- **Problem:** The user need and business context; explain how the problem was
+  discovered and validated.
+- **Evidence:** Research, support themes, analytics, experiments, or other
+  sources, with dates and limitations where relevant.
+- **Goal and success measures:** Baseline, target, metric definitions, and
+  guardrails. State when values are estimates or unavailable.
+- **Options and decisions:** Alternatives considered, prioritization rationale,
+  trade-offs, and what you decided not to do.
+- **Solution and delivery:** User experience, scope, requirements, collaboration,
+  launch approach, and your specific contribution.
+- **AI considerations (when applicable):** Why AI is appropriate, model or
+  system behavior at a high level, evaluation data and methods, failure modes,
+  privacy and safety boundaries, and human oversight.
+- **Outcome:** Measured results, measurement period, attribution limits, and
+  what changed after launch. Never invent impact numbers.
+- **Reflection:** What you learned, what you would change, and follow-up work.
 
-### Open directly
+## Existing project material
 
-Open either HTML file in a modern web browser. Game scores and preferences are
-saved in that browser's local storage.
+The repository currently includes:
 
-### Use a local web server (optional)
+- [`memory-game.html`](memory-game.html): A standalone Memory Game with a
+  persistent light/dark theme, keyboard interaction, scores, and two board
+  sizes. This can be presented as a product/design/implementation case study
+  only when your actual contribution and decisions are documented.
+- [`snake.html`](snake.html): A standalone Snake game with keyboard and touch
+  controls, pause/resume, scoring, and a saved best score.
+- [`PRD_dark_theme.md`](PRD_dark_theme.md) and [`PRD_snake.md`](PRD_snake.md):
+  product-requirement examples for the two games.
+- [`context.md`](context.md): Guidance for contributors and AI tools working on
+  the portfolio.
 
-From the project directory, run:
+These games are not AI products by themselves. Do not describe them as
+AI-powered or claim outcomes, research, leadership, or personal contributions
+that have not been verified.
+
+## Getting started
+
+### 1. Add your verified profile
+
+Replace these placeholders when you are ready:
+
+- `[YOUR NAME]`
+- `[TARGET ROLE OR PRODUCT DOMAIN]`
+- `[SHORT, EVIDENCE-BASED VALUE PROPOSITION]`
+- `[PROFESSIONAL EMAIL OR CONTACT LINK]`
+- `[LINKEDIN URL]`
+- `[RESUME LOCATION OR LINK]`
+
+Use only information you want to make public. Do not add private employer,
+customer, or user data.
+
+### 2. Choose your case studies
+
+Select work that demonstrates different strengths, for example discovery and
+prioritization, delivery and cross-functional leadership, or AI evaluation and
+responsible launch. For each project, confirm that you have permission to share
+the content and that all metrics and dates are accurate.
+
+### 3. Create portfolio pages
+
+The repository is currently a small set of standalone HTML pages; the portfolio
+site structure below is a suggested next step, not existing code:
+
+```text
+index.html
+about.html
+case-studies/
+  case-study-template.md
+  project-one.md
+assets/
+  images/
+  styles.css
+resume/
+  resume.pdf
+```
+
+Start with a responsive static site unless your needs require a framework or
+backend. Keep the game demos independently playable. Do not commit credentials,
+private data, or a resume containing details you do not intend to publish.
+
+### 4. Review before publishing
+
+- Verify names, titles, dates, roles, metrics, and links.
+- Mark prototypes and proposals clearly; distinguish them from shipped work.
+- Remove confidential material and obtain permission for third-party work.
+- Check keyboard access, mobile layout, contrast, and link behavior.
+- Test the site locally, then deploy it to a static host such as GitHub Pages
+  after choosing the final site structure.
+
+## Run the current game demos
+
+Open either HTML file directly in a modern browser, or optionally serve the
+repository:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then visit:
+Then open:
 
-- Memory Game: <http://localhost:8000/memory-game.html>
-- Snake: <http://localhost:8000/snake.html>
+- <http://localhost:8000/memory-game.html>
+- <http://localhost:8000/snake.html>
 
-## Project files
+## Working with AI tools
 
-| File | Description |
-| --- | --- |
-| [`memory-game.html`](memory-game.html) | Memory card game, styles, and game logic |
-| [`snake.html`](snake.html) | Snake game, canvas rendering, styles, and game logic |
-| [`context.md`](context.md) | Project purpose, features, and implementation overview |
-| [`PRD_dark_theme.md`](PRD_dark_theme.md) | Dark-theme requirements and verification checklist |
-| [`PRD_snake.md`](PRD_snake.md) | Snake requirements and verification checklist |
-
-## Technical notes
-
-- Both games are self-contained HTML files with embedded CSS and JavaScript.
-- There are no external libraries, services, or assets.
-- Memory Game storage keys: `memoryGameTheme` and `memoryGameScores`.
-- Snake best-score storage key: `snakeBestScore`.
-- Browser storage is local to the browser and device; it is not synchronized.
+Use [`context.md`](context.md) as the source of truth for the portfolio's
+purpose, content rules, and implementation guidance. AI can help structure,
+edit, and critique material, but you are responsible for verifying every claim,
+metric, citation, and public disclosure.
 
 ## Repository
 
-Clone this repository with:
-
-```bash
-git clone https://github.com/PiyushDesign2727/Memory-Game-by-Piyush.git
-cd Memory-Game-by-Piyush
-```
+This starter is hosted at
+<https://github.com/PiyushDesign2727/Memory-Game-by-Piyush>.
